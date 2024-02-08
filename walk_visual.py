@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from random_walk import RandomWalk
 
 while True:
-    rw = RandomWalk(500_000)
+    rw = RandomWalk()
     rw.fill_walk()
 
     plt.style.use("classic")
@@ -19,7 +19,9 @@ while True:
     )
     ax.set_aspect("equal")
     ax.scatter(0, 0, c="green", edgecolors="none", s=100)
-    ax.scatter(rw.x_values[-1], rw.y_values[-1], c="red", edgecolors="none", s=100)
+    ax.scatter(
+        rw.x_values[-1], rw.y_values[-1], c="red", edgecolors="none", s=100
+    )
 
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
