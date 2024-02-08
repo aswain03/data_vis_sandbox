@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from random_walk import RandomWalk
 
 while True:
-    rw = RandomWalk()
+    rw = RandomWalk(1_000_000)
     rw.fill_walk()
 
     plt.style.use("classic")
